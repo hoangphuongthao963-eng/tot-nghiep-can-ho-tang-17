@@ -242,11 +242,12 @@ body {
         width: 340px;
         height: 230px;
     }
-    .name { font-size: 1.4rem; }
-    .labels { bottom: 25px; left: 25px; }
+    .name { font-size: 1.2rem; }
+    .labels { bottom: 25px; left: 25px; width: calc(100% - 90px); }
     .wax-seal { bottom: 15px; right: 25px; width: 40px; height: 40px; }
     .envelope-front { padding: 25px; }
-    .letter { padding: 25px 20px; }
+    .letter { padding: 25px 20px; overflow-y: auto; scrollbar-width: none; }
+    .letter::-webkit-scrollbar { display: none; }
     .letter-title { font-size: 1.2rem; margin-bottom: 12px; }
     .letter-text { font-size: 0.95rem; }
     .letter-text p { margin-bottom: 10px !important; }
@@ -274,7 +275,7 @@ body {
     50% { transform: translateY(-240px); height: 90%; z-index: 6; border-radius: 0; }
     100% {
         transform: translateY(-10px);
-        height: 480px;
+        height: 560px;
         z-index: 6;
         border-radius: 60px / 15px;
         box-shadow: 
