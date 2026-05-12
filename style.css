@@ -237,13 +237,50 @@ body {
 }
 
 /* Mobile adjustments */
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .envelope-wrapper {
-        width: 320px;
-        height: 220px;
+        width: 340px;
+        height: 230px;
     }
-    .name {
-        font-size: 1.4rem;
+    .name { font-size: 1.4rem; }
+    .labels { bottom: 25px; left: 25px; }
+    .wax-seal { bottom: 15px; right: 25px; width: 40px; height: 40px; }
+    .envelope-front { padding: 25px; }
+    .letter { padding: 25px 20px; }
+    .letter-title { font-size: 1.2rem; margin-bottom: 12px; }
+    .letter-text { font-size: 0.95rem; }
+    .letter-text p { margin-bottom: 10px !important; }
+    .letter-text ul { line-height: 1.5 !important; }
+    .letter-footer { margin-top: 15px; }
+    .signature { font-size: 1.5rem; }
+    
+    .envelope-wrapper.open {
+        transform: translateY(20px) scale(0.9);
+    }
+    .envelope-wrapper.open .letter {
+        animation: extractLetterMobile 1.8s forwards;
+        animation-delay: 0.3s;
+    }
+    .corner svg { width: 35px; height: 35px; }
+    .corner.top-left { top: 20px; left: 20px; }
+    .corner.top-right { top: 20px; right: 20px; }
+    .corner.bottom-left { bottom: 20px; left: 20px; }
+    .corner.bottom-right { bottom: 20px; right: 20px; }
+}
+
+@keyframes extractLetterMobile {
+    0% { transform: translateY(0); height: 90%; z-index: 2; border-radius: 0; }
+    45% { transform: translateY(-240px); height: 90%; z-index: 2; border-radius: 0; }
+    50% { transform: translateY(-240px); height: 90%; z-index: 6; border-radius: 0; }
+    100% {
+        transform: translateY(-10px);
+        height: 480px;
+        z-index: 6;
+        border-radius: 60px / 15px;
+        box-shadow: 
+            0 30px 40px rgba(0,0,0,0.4),
+            inset 0 -30px 20px -15px rgba(0,0,0,0.3),
+            inset 0 30px 20px -15px rgba(0,0,0,0.3);
     }
 }
 
