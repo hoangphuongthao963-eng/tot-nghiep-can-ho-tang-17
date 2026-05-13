@@ -45,7 +45,7 @@ body {
 }
 
 .envelope-wrapper.open {
-    transform: translateY(60px) scale(0.9);
+    transform: translateY(130px) scale(0.9);
     cursor: default;
 }
 
@@ -228,6 +228,7 @@ body {
     text-transform: uppercase;
     opacity: 0.6;
     animation: pulse 2s infinite;
+    white-space: nowrap;
 }
 
 @keyframes pulse {
@@ -256,7 +257,7 @@ body {
     .signature { font-size: 1.5rem; }
     
     .envelope-wrapper.open {
-        transform: translateY(20px) scale(0.9);
+        transform: translateY(160px) scale(0.9);
     }
     .envelope-wrapper.open .letter {
         animation: extractLetterMobile 1.8s forwards;
